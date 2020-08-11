@@ -1,4 +1,6 @@
 # Импорты
+import data
+
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -21,14 +23,6 @@ def get_tours():
     return render_template('tour.html')
 
 
-app.run('0.0.0.0',5000, debug=True)
 
-"""
-Распишите роуты, выведите тексты:
-
-– главной /, (выведите здесь будет главная);
-– направления /departures/<departure>/ (выведите здесь будет направление);
-– тура /tours/<id>/ (выведите здесь будет тур).
- 
-
-"""
+if __name__ == '__main__':
+    app.run('0.0.0.0', 5000, debug=True)
